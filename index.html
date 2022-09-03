@@ -162,7 +162,7 @@
                         src="https://placeimg.com/400/400/arch" alt="Album">
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title text-white text-2xl">New album is released!</h2>
+                    <h2 class="card-title text-white">New album is released!</h2>
                     <p class="text-defaultcolor">Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe,
                         Joe Biden, Military, News,
                         Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) - U.S. President Joe
@@ -218,77 +218,9 @@
                                 class="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                             <input disabled type="radio" name="rating-${id}"
                                 class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <span class="mt-[0.3rem] sm:mt-[0.15rem] ml-3">4.5</span>
                         </div>
-                        <button class="btn btn-info btn-outline btn-circle fa-solid fa-arrow-right text-lg"></button>
-                    </div>
-                </div>
-            </article>
-            <!-- article -->
-            <article class="card lg:card-side bg-base-100 shadow-xl">
-                <figure class="p-4 pb-0 md:p-6 lg:pb-6 lg:pr-0"><img class="rounded-xl"
-                        src="https://placeimg.com/400/400/arch" alt="Album">
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title text-white text-2xl">New album is released!</h2>
-                    <p class="text-defaultcolor">Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe,
-                        Joe Biden, Military, News,
-                        Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) - U.S. President Joe
-                        Biden has announced nearly $3</p>
-                    <div class="flex flex-col sm:flex-row bg-slate-700 shadow-inner shadow-slate-800 rounded-xl">
-                        <div class="stat flex items-center ">
-                            <div class="text-secondary">
-                                <div class="avatar">
-                                    <div class="w-16 rounded-full">
-                                        <img src="https://placeimg.com/128/128/people" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="stat-title">Tasks done</div>
-                                <div class="stat-desc text-secondary">31 tasks remaining</div>
-                            </div>
-                        </div>
-                        <!-- devider start -->
-                        <div class="border border-gray-400 border-t-1 mx-2 sm:border-t-0 sm:mx-0 sm:border-r-1 sm:my-2">
-                        </div>
-                        <!-- devider end -->
-                        <div class="stat">
-                            <div class="stat-figure text-secondary">
-                                <i class="fa-solid fa-eye text-4xl"></i>
-                                <!-- <i class="fa-regular fa-eye text-4xl"></i> -->
-                            </div>
-                            <div class="stat-title">Page Views</div>
-                            <div class="stat-value text-secondary">2.6M</div>
-                            <div class="stat-desc">21% more than last month</div>
-                        </div>
-                    </div>
-                    <div class="card-actions flex items-center justify-around sm:justify-between">
-                        <div class="rating rating-md rating-half">
-                            <input type="radio" name="rating-${id}" class="rating-hidden" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-1" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-1" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-1" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-1" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-1" checked />
-                            <input disabled type="radio" name="rating-${id}"
-                                class="bg-orange-400 mask mask-star-2 mask-half-2" />
-                            <span class="mt-[0.3rem] sm:mt-[0.15rem] ml-3">4.5</span>
-                        </div>
-                        <button class="btn btn-info btn-outline btn-circle fa-solid fa-arrow-right text-lg"></button>
+                        <label for="details-modal"
+                            class="btn btn-info btn-outline btn-circle fa-solid fa-arrow-right text-lg"></label>
                     </div>
                 </div>
             </article>
@@ -299,6 +231,49 @@
         class="w-full px-3 py-5 md:py-10 overflow-hidden flex justify-center items-center glass bg-black hover:bg-black">
         <span class="font-berkshire text-white text-sm">Copyright 2022 Daily-Dose</span>
     </footer>
+
+    <!-- details modal -->
+    <input type="checkbox" id="details-modal" class="modal-toggle" />
+    <label for="details-modal" class="modal bg-[#fff3] modal-bottom sm:modal-middle cursor-pointer w-full">
+        <!-- modal body -->
+        <label class="modal-box relative card w-full bg-base-100 shadow-xl">
+            <label for="details-modal" class="btn btn-sm btn-circle bg-tomato absolute right-2 top-2">✕</label>
+            <figure class="px-0 pt-0">
+                <img src="https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body text-justify">
+                <div class="flex flex-row gap-2">
+                    <b class="row-span-2 font-berkshire text-5xl">"</b>
+                    <h2 class="row-span-8 card-title text-base text-white">Biden Pledges
+                        Nearly $3 Billion To
+                        Ukraine In Largest U.S.
+                        Military Aid Package
+                        Yet !</h2>
+                    <b class="row-span-2 font-berkshire text-5xl">"</b>
+                </div>
+                <hr>
+                <p class="text-sm"><u class="text-white font-bold">Details</u> : Wednesday, August 24, 2022 | Tag
+                    Cloud Tags:
+                    Biden, EU, Euro, Europe,
+                    Joe Biden,
+                    Military, News,
+                    Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) - U.S. President Joe Biden
+                    has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence
+                    day six months after Russia invaded the country.'The United States of America is committed to
+                    supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of
+                    that commitment, I am proud to announce our biggest tranche of security assistance to date:
+                    approximately $2.</p>
+                <hr>
+                <p class="text-sm"><u class="text-white font-bold">Total View</u> : <span
+                        class="text-orange-300">488</span></p>
+                <p class="text-sm"><u class="text-white font-bold">Ratings</u> : <span
+                        class="text-orange-300">4.5</span></p>
+                <p class="text-sm"><u class="text-white font-bold">Badge</u> : <span
+                        class="text-orange-300">Excellent</span></p>
+            </div>
+        </label>
+    </label>
+
     <!-- scripts -->
     <script src="js/category.js"></script>
     <script src="js/sort.js"></script>
