@@ -1,132 +1,7 @@
-<!DOCTYPE html>
-<html data-theme="dracula" lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Daily-Dose | Home</title>
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins&display=swap" rel="stylesheet">
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/b9f92f6b81.js" crossorigin="anonymous"></script>
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                // added custom device
-                screens: {
-                    'sm': '640px',
-                    'md': '768px',
-                    'lg': '1024px',
-                    '2lg': '1158px',
-                    'xl': '1280px',
-                    '2xl': '1536px',
-                },
-                extend: {
-                    fontFamily: {
-                        'berkshire': ['"Berkshire Swash"', 'cursive'],
-                        'poppins': ['"Poppins"', 'sans-serif'],
-                    },
-                    colors: {
-                        tomato: '#ff7d82',
-                        defaultcolor: '#ced6ff',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-
-<body class="font-poppins text-defaultcolor">
-    <!-- header -->
-    <header class="mx-auto px-3 xl:max-w-7xl">
-        <!-- navbar -->
-        <nav class="navbar bg-base-100">
-            <div class="flex-1">
-                <a
-                    class="btn btn-sm md:btn-md text-sm md:text-xl glass text-white normal-case font-berkshire">Daily-Dose</a>
-            </div>
-            <div class="flex-none gap-2 md:gap-3">
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-sm md:btn-md btn-info">
-                        <span>News</span>
-                    </label>
-                    <div tabindex="0" class="mt-3 card card-compact dropdown-content w-40 bg-slate-700 shadow">
-                        <div class="card-body">
-                            <span class="font-bold text-lg">8 New News</span>
-                            <div class="card-actions">
-                                <button class="btn btn-primary btn-block">View</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-sm md:btn-md">
-                        <span>Blogs</span>
-                    </label>
-                    <div tabindex="0" class="mt-3 card card-compact dropdown-content w-40 bg-slate-700 shadow">
-                        <div class="card-body">
-                            <span class="font-bold text-lg">8 New Blogs</span>
-                            <div class="card-actions">
-                                <button onclick="document.location = 'blog.html'"
-                                    class="btn btn-primary btn-block">View</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-circle avatar mt-2">
-                        <div class="w-10 rounded-full">
-                            <img src="https://placeimg.com/80/80/people" />
-                        </div>
-                    </label>
-                    <ul tabindex="0"
-                        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-700 rounded-box w-40">
-                        <li><a>Profile</a></li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- devider -->
-        <div class="pb-5 md:py-5 w-full">
-            <hr>
-        </div>
-        <!-- category-list button -->
-        <section id="category-list" class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn btn-info text-xs md:text-base lg:text-xs 2lg:text-sm">Home</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Breaking news</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Regular news</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">International news</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Sports</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Entertainment</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Culture</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">Arts</button>
-            <button onclick="categoryBtnActivate(this)"
-                class="category-btn btn text-xs md:text-base lg:text-xs 2lg:text-sm">All news</button>
-        </section>
-    </header>
-    <!-- main body -->
-    <main class="mx-auto px-3 xl:max-w-7xl grid grid-cols-1 gap-4 my-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <!-- Today's Pick section -->
+const writeHomeInsideMainContainer = () => {
+    main.innerHTML = `
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <!-- Today's Pick section -->
             <section
                 class="p-4 flex flex-col gap-4 w-full bg-transparent rounded-xl text-sm md:text-base lg:col-span-2">
                 <h1 class="text-white text-2xl md:text-3xl"><b class="font-berkshire text-tomato">Today's</b> Pick</h1>
@@ -159,9 +34,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -174,9 +47,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -189,9 +60,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -212,9 +81,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -227,9 +94,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -242,9 +107,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -257,9 +120,7 @@
                         <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
-                            <hr>
                             <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <hr>
                             <div class="card-actions justify-between">
                                 <p><b class="text-orange-300 grow-0">Editor</b> : Editor Name</p>
                                 <p><b class="text-orange-300 grow-0">Publish Date</b> : date</p>
@@ -434,66 +295,7 @@
             <button class="self-center btn btn-info">See all&nbsp;&nbsp;&nbsp;<i
                     class="fa-solid fa-arrow-right"></i></button>
         </section>
-    </main>
-    <!-- footer -->
-    <footer
-        class="w-full px-3 py-5 md:py-10 overflow-hidden flex justify-center items-center glass bg-black hover:bg-black">
-        <span class="font-berkshire text-white text-sm">Copyright 2022 Daily-Dose</span>
-    </footer>
+    `;
+}
 
-    <!-- details modal -->
-    <input type="checkbox" id="details-modal" class="modal-toggle" />
-    <label for="details-modal" class="modal bg-[#fff3] modal-bottom sm:modal-middle cursor-pointer w-full">
-        <!-- modal body -->
-        <label class="modal-box relative card w-full bg-base-100 shadow-xl">
-            <label for="details-modal" class="btn btn-sm btn-circle bg-tomato absolute right-2 top-2">✕</label>
-            <figure class="px-0 pt-0">
-                <img src="https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body text-justify">
-                <div class="flex flex-row gap-2">
-                    <b class="row-span-2 font-berkshire text-5xl">"</b>
-                    <h2 class="row-span-8 card-title text-base text-white">Biden Pledges
-                        Nearly $3 Billion To
-                        Ukraine In Largest U.S.
-                        Military Aid Package
-                        Yet !</h2>
-                    <b class="row-span-2 font-berkshire text-5xl">"</b>
-                </div>
-                <hr>
-                <p class="text-sm"><u class="text-white font-bold">Details</u> : Wednesday, August 24, 2022 | Tag
-                    Cloud Tags:
-                    Biden, EU, Euro, Europe,
-                    Joe Biden,
-                    Military, News,
-                    Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) - U.S. President Joe Biden
-                    has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence
-                    day six months after Russia invaded the country.'The United States of America is committed to
-                    supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of
-                    that commitment, I am proud to announce our biggest tranche of security assistance to date:
-                    approximately $2.</p>
-                <hr>
-                <p class="text-sm"><u class="text-white font-bold">Total View</u> : <span
-                        class="text-orange-300">488</span></p>
-                <p class="text-sm"><u class="text-white font-bold">Ratings</u> : <span
-                        class="text-orange-300">4.5</span></p>
-                <p class="text-sm"><u class="text-white font-bold">Badge</u> : <span
-                        class="text-orange-300">Excellent</span></p>
-            </div>
-        </label>
-    </label>
-
-    <!-- scripts -->
-    <script src="js/category.js"></script>
-    <script src="js/sort.js"></script>
-    <script>
-        function responsive() {
-            let height = document.documentElement.clientHeight;
-            console.log(height);
-            setTimeout(responsive, 200);
-        }
-        // responsive();
-    </script>
-</body>
-
-</html>
+writeHomeInsideMainContainer();
