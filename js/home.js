@@ -280,6 +280,6 @@ const writeHomeInsideMainContainer = (dataArray) => {
         All&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
 </section>
 `;
-    document.getElementById('loading-home').classList.add('hidden');
+
 }
 
