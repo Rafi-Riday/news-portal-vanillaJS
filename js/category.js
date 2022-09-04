@@ -1,4 +1,4 @@
-const writeCategoryInsideMainContainer = () => {
+const writeCategoryInsideMainContainer = (thisParameter) => {
     main.innerHTML = `
         <div class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base">4 items found for category
             Entertainment
@@ -14,13 +14,13 @@ const writeCategoryInsideMainContainer = () => {
             </select>
             <!-- todays pick vs trading -->
             <div class="flex flex-col sm:flex-row gap-2">
-                <button onclick="sortBoolian(this)"
+                <button onclick="sortBoolianBtn(this, 'boolian-btn')"
                     class="boolian-btn btn btn-info text-xs md:text-base lg:text-xs 2lg:text-sm"><i
                         class="fa-solid fa-retweet"></i></button>
-                <button onclick="sortBoolian(this)"
+                <button onclick="sortBoolianBtn(this, 'boolian-btn')"
                     class="boolian-btn btn btn-info btn-outline text-xs md:text-base lg:text-xs 2lg:text-sm">Today's
                     Pick</button>
-                <button onclick="sortBoolian(this)"
+                <button onclick="sortBoolianBtn(this, 'boolian-btn')"
                     class="boolian-btn btn btn-info btn-outline text-xs md:text-base lg:text-xs 2lg:text-sm">Trending</button>
             </div>
         </section>

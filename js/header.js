@@ -1,9 +1,9 @@
-const getCategoryData = async () => {
+const getPageBtnData = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
     const data = await res.json();
-    displayCategoryData(data.data.news_category);
+    displayPageBtnData(data.data.news_category);
 }
-const displayCategoryData = (categoryArray) => {
+const displayPageBtnData = (categoryArray) => {
     const pageList = document.getElementById('page-list');
     categoryArray.forEach(category => {
         const categoryBtn = document.createElement('button');
@@ -15,7 +15,7 @@ const displayCategoryData = (categoryArray) => {
     });
 }
 
-getCategoryData();
+getPageBtnData();
 
 const pageBtnActivate = (activeBtn) => {
     const pageBtnList = document.getElementsByClassName('page-btn');

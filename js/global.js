@@ -15,3 +15,4 @@ for (const blogCountContainer of blogCountContainerList) {
 }
 
 const main = document.getElementById('main');
+
