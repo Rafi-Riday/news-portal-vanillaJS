@@ -111,8 +111,8 @@ ${news.details.slice(0, 100)}
             </div>
         </div>
         <div>
-            <div class="stat-title">${news.author.name && news.author.name.split(' ').length > 2 ? news.author.name.split(' ').slice(0, 2).join(' ') : news.author.name}</div>
-            <div class="stat-desc text-secondary">${news.author.published_date}</div>
+            <div class="stat-title">${news.author.name && news.author.name.split(' ').length > 2 ? news.author.name.split(' ').slice(0, 2).join(' ') : news.author.name === null || news.author.name === '' ? 'No Name' : news.author.name}</div>
+            <div class="stat-desc text-secondary">${news.author.published_date === null ? '' : news.author.published_date}</div>
         </div>
     </div>
     <!-- devider start -->
@@ -124,7 +124,7 @@ ${news.details.slice(0, 100)}
             <i class="fa-solid fa-eye text-2xl"></i>
         </div>
         <div class="stat-title">Views</div>
-        <div class="stat-value text-secondary text-xl">${news.total_view}</div>
+        <div class="stat-value text-secondary text-xl">${news.total_view === null ? '0' : news.total_view}</div>
     </div>
 </div>
 <div class="card-actions flex items-center justify-around sm:justify-between">
