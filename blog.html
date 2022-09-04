@@ -44,9 +44,9 @@
     </script>
 </head>
 
-<body class="font-poppins">
+<body class="font-poppins min-h-screen flex flex-col justify-between">
     <!-- header -->
-    <header class="mx-auto px-3 xl:max-w-7xl">
+    <header class="w-full mx-auto px-3 pt-2 xl:max-w-7xl">
         <!-- navbar -->
         <nav class="navbar bg-base-100">
             <div class="flex-1">
@@ -82,79 +82,80 @@
         </div>
     </header>
     <!-- main body -->
-    <main class="mx-auto px-3 xl:max-w-7xl">
+    <main class="mx-auto px-3 w-full xl:max-w-7xl grow py-5 md:py-8">
         <section id="faq" class="w-full grid grid-cols-1 gap-5 md:gap-6 lg:gap-7">
             <h1 class="text-xl md:text-3xl lg:text-5xl font-semibold text-center">Frequently Asked Questions</h1>
-            <p class="text-center text-sm md:text-base">It is a long established fact that a reader will be distracted
-                by the readable content of a page when
-                looking at its layout.</p>
             <div id="blog-container" class="grid grid-cols-1 gap-4 md:gap-5">
                 <!-- Question 1 -->
                 <div class="collapse collapse-arrow">
                     <input type="checkbox" class="peer" />
                     <div
-                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
-                        Flexbox VS Grid
+                        class="collapse-title text-dracula_color font-bold border-2 border-white rounded-lg rounded-b-none peer-checked:bg-[#506ec080]">
+                        Var vs Let vs Const
                     </div>
                     <div
-                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
-                        The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed
-                        for layout in one dimension - either a row or a column. Grid was designed for two-dimensional
-                        layout - rows, and columns at the same time. The two specifications share some common features.
-                        Grid is much newer than Flexbox and has a bit less browser support.
+                        class="peer-checked:pt-2 collapse-content md:text-base border-2 border-white rounded-lg rounded-t-none">
+                        Before the advent of ES6, var declarations ruled. There are issues associated with variables
+                        declared with var, though. That is why it was necessary for new ways to declare variables to
+                        emerge. First, let's get to understand var more before we discuss those issues.
+                        <br>
+                        <br>
+                        let is now preferred for variable declaration. It's no surprise as it comes as an improvement to
+                        var declarations. It also solves the problem with var that we just covered. Let's consider why
+                        this is so.
+                        <br>
+                        <br>
+                        Variables declared with the const maintain constant values. const declarations share some
+                        similarities with let declarations. const cannot be updated or re-declared.
                     </div>
                 </div>
                 <!-- Question 2 -->
                 <div class="collapse collapse-arrow">
                     <input type="checkbox" class="peer" />
                     <div
-                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
-                        Tailwind VS Bootstrap
+                        class="collapse-title text-dracula_color font-bold border-2 border-white rounded-lg rounded-b-none peer-checked:bg-[#506ec080]">
+                        Arrow Func vs Reguler Func
                     </div>
                     <div
-                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
-                        Tailwind offers predesigned widgets to build a site from scratch with fast UI development.
-                        Bootstrap comes with a set of pre-styled responsive, mobile-first components that possess a
-                        definite UI kit.
-                        <br>
-                        Tailwind CSS uses a set of utility classes to create a neat UI with more flexibility and
-                        uniqueness. Sites created using Bootstrap follow the generic pattern that makes them look
-                        identical.
-                        <br>
-                        Websites created using Tailwind CSS are much more customizable. Websites created with Bootstraps
-                        are known for their responsiveness and flawless design, but the looks are generic and similar.
+                        class="peer-checked:pt-2 collapse-content md:text-base border-2 border-white rounded-lg rounded-t-none">
+                        Regular functions created using function declarations or expressions are constructible and
+                        callable. Since regular functions are constructible, they can be called using the new keyword.
+                        However, the arrow functions are only callable and not constructible. arrow functions can never
+                        be used as constructor functions.
                     </div>
                 </div>
                 <!-- Question 3 -->
                 <div class="collapse collapse-arrow">
                     <input type="checkbox" class="peer" />
                     <div
-                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
-                        What is The CSS box model
+                        class="collapse-title text-dracula_color font-bold border-2 border-white rounded-lg rounded-b-none peer-checked:bg-[#506ec080]">
+                        .map() vs .forEach() vs .filter() vs .find()
                     </div>
                     <div
-                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
-                        In web development, the CSS box model refers to how HTML elements are modeled in browser engines
-                        and how the dimensions of those HTML elements are derived from CSS properties. It is a
-                        fundamental concept for the composition of HTML webpages. The CSS box model is essentially a box
-                        that wraps around every HTML element.
+                        class="peer-checked:pt-2 collapse-content md:text-base border-2 border-white rounded-lg rounded-t-none">
+                        .forEach() executes a function for each individual element in an array.
+                        <br>
+                        <br>
+                        .map() transforms elements in an array.
+                        <br>
+                        <br>
+                        .filter() selects a subset of multiple elements from an array.
+                        <br>
+                        <br>
+                        .find() selects a single element from an array.
                     </div>
                 </div>
                 <!-- Question 4 -->
                 <div class="collapse collapse-arrow">
                     <input type="checkbox" class="peer" />
                     <div
-                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
-                        What Is Semantic Tag
+                        class="collapse-title text-dracula_color font-bold border-2 border-white rounded-lg rounded-b-none peer-checked:bg-[#506ec080]">
+                        Why to use template string?
                     </div>
                     <div
-                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
-                        The HTML semantics refers to the tags that provide meaning to an HTML page rather than just
-                        presentation. It makes HTML more comprehensible by better defining the different sections and
-                        layout of web pages. Semantic HTML elements describe their meaning in a human- and
-                        machine-readable way. Elements such as &lt;header&gt; , &lt;footer&gt; and &lt;article&gt; are
-                        all considered semantic because they accurately describe the purpose of the element and the type
-                        of content that is inside them.
+                        class="peer-checked:pt-2 collapse-content md:text-base border-2 border-white rounded-lg rounded-t-none">
+                        Template literals provide an easy way to interpolate variables and expressions into strings. The
+                        method is called string interpolation.
                     </div>
                 </div>
             </div>

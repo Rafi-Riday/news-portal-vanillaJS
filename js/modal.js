@@ -25,9 +25,13 @@ const detailsModal = async (newsId) => {
             <p class="text-sm"><u class="text-white font-bold">Ratings</u> : <span class="text-orange-300">${news.data[0].rating.number}</span></p>
             <p class="text-sm"><u class="text-white font-bold">Badge</u> : <span class="text-orange-300">${news.data[0].rating.badge}</span></p>
         </div>
+        <div class="modal-action">
+            <label for="details-modal" class="btn">Close</label>
+        </div>
     `;
     }
     catch (error) {
         console.log(error);
+        error();
     }
 }

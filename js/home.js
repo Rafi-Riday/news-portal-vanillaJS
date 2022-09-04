@@ -5,6 +5,7 @@ const homeDisplay = async () => {
         writeHomeInsideMainContainer(data.data);
     } catch (error) {
         console.log(error);
+        error();
     }
 }
 
@@ -79,8 +80,6 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 </div>
             </label>
         </div>
-        <button onclick="writeCategoryInsideMainContainer(this)" class="self-center btn btn-info">View
-            All&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </section>
     <!-- Latest News section -->
     <section class="p-4 flex flex-col gap-4 w-full rounded-xl text-sm md:text-base lg:col-span-2">
@@ -139,8 +138,6 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 </div>
             </label>
         </div>
-        <button onclick="writeCategoryInsideMainContainer(this)" class="self-center btn btn-info">View
-            All&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
     </section>
 </div>
 <!-- World News section -->
@@ -184,7 +181,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             </div>
         </label>
     </div>
-    <button onclick="writeCategoryInsideMainContainer(this)" class="self-center btn btn-info">View
+    <button id="03" onclick="pageBtnActivate(this)" class="self-center btn btn-info">View
         All&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
 </section>
 <!-- Entertainment section -->
@@ -279,9 +276,10 @@ const writeHomeInsideMainContainer = (dataArray) => {
             </figure>
         </label>
     </div>
-    <button onclick="writeCategoryInsideMainContainer(this)" class="self-center btn btn-info">View
+    <button id="05" onclick="pageBtnActivate(this)" class="self-center btn btn-info">View
         All&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
 </section>
 `;
+    document.getElementById('loading-home').classList.add('hidden');
 }
 

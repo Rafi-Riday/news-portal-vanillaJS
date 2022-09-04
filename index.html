@@ -47,7 +47,7 @@
 
 <body class="font-poppins text-defaultcolor min-h-screen flex flex-col justify-between">
     <!-- header -->
-    <header class="mx-auto px-3 xl:max-w-7xl">
+    <header class="mx-auto px-3 pt-2 xl:max-w-7xl">
         <!-- navbar -->
         <nav class="navbar bg-base-100">
             <div class="flex-1">
@@ -91,6 +91,11 @@
     </header>
     <!-- main body -->
     <main id="main" class="mx-auto px-3 w-full xl:max-w-7xl grow">
+        <br>
+        <br>
+        <div id="loading-home" class="w-full flex justify-center"><button
+                class="mx-auto btn btn-lg bg-transparent loading">loading</button>
+        </div>
     </main>
     <!-- footer -->
     <footer
@@ -105,6 +110,15 @@
         <label id="details-modal-container" class="modal-box relative card w-full bg-base-100 shadow-xl">
         </label>
     </label>
+
+    <!-- toast -->
+    <div id="error-msg" class="toast hidden">
+        <div class="alert alert-error">
+            <div>
+                <span class="text-lg font-bold">Something went wrong <i class="fa-regular fa-face-frown"></i></span>
+            </div>
+        </div>
+    </div>
 
     <!-- scripts -->
     <script src="js/global.js"></script>

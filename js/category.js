@@ -11,9 +11,7 @@ const specificNewsDisplay = (categoryId) => {
         filterData: 'none',
     };
     main.innerHTML = `
-        <div class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base"><span id="news-container-child-count">&nbsp;&nbsp;</span> items found for category
-            Entertainment
-        </div>
+        <div id="news-container-child-count" class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base"></div>
         <!-- sorting section -->
         <section class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base flex justify-between">
             <!-- sorting option -->
@@ -37,6 +35,7 @@ const specificNewsDisplay = (categoryId) => {
         </section>
         <div id="specific-news-container"
             class="max-w-3xl xl:max-w-7xl mx-auto my-5 p-4 w-full bg-slate-700 rounded-2xl text-sm md:text-base grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <button id="loading" class="xl:col-span-2 btn btn-lg bg-transparent loading">loading</button>
         </div>
     `;
 
@@ -82,13 +81,14 @@ const specificNewsDisplayEach = async (categoryId) => {
     }
     catch (error) {
         console.log(error);
+        error();
     }
 
 }
 
 
 const displayNewsFunction = (dataArray, categoryId) => {
-    document.getElementById('specific-news-container').textContent = '';
+    document.getElementById('specific-news-container').innerHTML = '<button id="loading" class="xl:col-span-2 btn btn-lg bg-transparent loading">loading</button>';
     dataArray.forEach(news => {
         const newsArticle = document.createElement('article');
         newsArticle.classList.add('card', 'md:card-side', 'bg-base-100', 'shadow-xl');
@@ -151,7 +151,17 @@ ${news.details.slice(0, 100)}
         document.getElementById('specific-news-container').appendChild(newsArticle);
     });
 
-    document.getElementById('news-container-child-count').innerText = document.getElementById('specific-news-container').childElementCount;
+    document.getElementById('loading').classList.add('hidden');
+
+    document.getElementById('news-container-child-count').innerText = `${document.getElementById('specific-news-container').childElementCount - 1} items found for this news category`;
+
+    if (document.getElementById('specific-news-container').childElementCount === 1) {
+        document.getElementById('news-container-child-count').innerHTML = `<span class="sm:text-2xl">Sorry, no item found for this news category <i class="fa-regular fa-face-frown"></i></span>`;
+        document.getElementById('specific-news-container').classList.add('hidden');
+    }
+    else {
+        document.getElementById('specific-news-container').classList.remove('hidden');
+    }
 
 
     const selectSorting = document.getElementById('select-sorting');
@@ -160,14 +170,5 @@ ${news.details.slice(0, 100)}
         specificNewsDisplayEach(categoryId);
     })
 
-    // const selectFilterList = document.getElementsByClassName('filter-btn');
-    // for (const selectFilter of selectFilterList) {
-    //     selectFilter.addEventListener('click', function (event) {
-    //         const btnId = selectFilter.classList[0];
-    //         console.log(btnId);
-    //         // sortAndFilter.filterData = selectSorting.value;
-    //         // specificNewsDisplayEach(categoryId);
-    //     })
-    // }
 }
 

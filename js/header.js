@@ -1,7 +1,12 @@
 const getPageBtnData = async () => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
-    const data = await res.json();
-    displayPageBtnData(data.data.news_category);
+    try {
+        const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
+        const data = await res.json();
+        displayPageBtnData(data.data.news_category);
+    } catch (error) {
+        console.log(error);
+        error();
+    }
 }
 const displayPageBtnData = (categoryArray) => {
     const pageList = document.getElementById('page-list');
@@ -28,6 +33,6 @@ const pageBtnActivate = (activeBtn) => {
     for (const pageBtn of pageBtnList) {
         pageBtn.classList.remove('btn-info');
     }
-    activeBtn.classList.add('btn-info');
-    document.title = `Daily-Dose | ${activeBtn.innerText}`;
+    document.getElementById(activeBtn.getAttribute('id')).classList.add('btn-info');
+    document.title = `Daily-Dose | ${document.getElementById(activeBtn.getAttribute('id')).innerText}`;
 }
