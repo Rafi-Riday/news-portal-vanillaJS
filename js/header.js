@@ -9,7 +9,7 @@ const displayPageBtnData = (categoryArray) => {
         const categoryBtn = document.createElement('button');
         categoryBtn.classList.add('page-btn', 'btn', 'text-xs', 'md:text-base', 'lg:text-xs', '2lg:text-sm');
         categoryBtn.setAttribute('id', `${category.category_id}`);
-        categoryBtn.setAttribute('onclick', 'pageBtnActivate(this)');
+        categoryBtn.setAttribute('onclick', `pageBtnActivate(this)`);
         categoryBtn.innerHTML = `${category.category_name}`;
         pageList.appendChild(categoryBtn);
     });
@@ -20,10 +20,10 @@ getPageBtnData();
 const pageBtnActivate = (activeBtn) => {
     const pageBtnList = document.getElementsByClassName('page-btn');
     if (activeBtn.getAttribute('id') === 'home') {
-        writeHomeInsideMainContainer();
+        homeDisplay();
     }
     else {
-        writeCategoryInsideMainContainer();
+        specificNewsDisplay(activeBtn.getAttribute('id'));
     }
     for (const pageBtn of pageBtnList) {
         pageBtn.classList.remove('btn-info');

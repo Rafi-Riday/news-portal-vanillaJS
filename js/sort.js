@@ -16,3 +16,11 @@ const sortNewsByLatest = (dataArray) => {
     return dataArray.sort((a, b) => (new Date(b.author.published_date).getTime()) - (new Date(a.author.published_date).getTime()));
 }
 
+const sortNewsByViews = (dataArray) => {
+    return dataArray.sort((a, b) => (b.total_view) - (a.total_view));
+}
+
+const sortNewsByRatings = (dataArray) => {
+    return dataArray.sort((a, b) => (b.rating.number) - (a.rating.number));
+}
+
