@@ -100,10 +100,10 @@ const displayNewsFunction = (dataArray, categoryId) => {
 <figure class="p-2 pb-0 md:p-6 md:pr-0"><img class="rounded-xl"
 src="${news.thumbnail_url}" alt="${news.title}">
 </figure>
-<div class="card-body p-4 text-justify">
+<div class="card-body p-4 text-left">
 <h2 class="card-title text-orange-300">${news.title}</h2>
 <p class="text-defaultcolor">
-${news.details.slice(0, 100)}
+${news.details.slice(0, 100)}... <label onclick="detailsModal('${news._id}')" for="details-modal" class="text-white cursor-pointer underline">See More</label>
 </p>
 <div class="flex flex-col sm:flex-row gap-2 bg-slate-700 shadow-inner shadow-slate-800 rounded-xl">
     <div class="stat flex gap-2 items-center py-2 px-0 pl-4 sm:pl-2">
@@ -116,7 +116,7 @@ ${news.details.slice(0, 100)}
         </div>
         <div>
             <div class="stat-title">${news.author.name && news.author.name.split(' ').length > 2 ? news.author.name.split(' ').slice(0, 2).join(' ') : news.author.name === null || news.author.name === '' ? 'No Name' : news.author.name}</div>
-            <div class="stat-desc text-secondary">${news.author.published_date === null ? '' : news.author.published_date}</div>
+            <div class="stat-desc text-secondary">${news.author.published_date === null ? 'No Date' : news.author.published_date}</div>
         </div>
     </div>
     <!-- devider start -->
