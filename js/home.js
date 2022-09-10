@@ -46,7 +46,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[8].image_url}" alt="${trendingList[8].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[8].title}</h2>
-                    <p>${trendingList[8].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[8].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[8].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[8].author.published_date}</p>
@@ -59,7 +59,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[10].image_url}" alt="${trendingList[10].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[10].title}</h2>
-                    <p>${trendingList[10].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[10].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[10].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[10].author.published_date}</p>
@@ -72,7 +72,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[15].image_url}" alt="${trendingList[11].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[15].title}</h2>
-                    <p>${trendingList[15].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[15].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[15].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[15].author.published_date}</p>
@@ -91,7 +91,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[0].image_url}" alt="${trendingList[0].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[0].title}</h2>
-                    <p>${trendingList[0].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[0].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[0].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[0].author.published_date}</p>
@@ -104,7 +104,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[1].image_url}" alt="${trendingList[10].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[1].title}</h2>
-                    <p>${trendingList[1].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[1].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[1].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[1].author.published_date}</p>
@@ -117,7 +117,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[2].image_url}" alt="${trendingList[10].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[2].title}</h2>
-                    <p>${trendingList[2].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[2].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[2].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[2].author.published_date}</p>
@@ -130,7 +130,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
                 <figure><img src="${trendingList[3].image_url}" alt="${trendingList[10].title}" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">${trendingList[3].title}</h2>
-                    <p>${trendingList[3].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label></p>
+                    <p>${trendingList[3].details.slice(0, 100)}... <i class="text-white underline">See More</i></p>
                     <div class="card-actions justify-between">
                         <p><b class="text-orange-300 grow-0">Editor</b> : ${trendingList[3].author.name}</p>
                         <p><b class="text-orange-300 grow-0">Published</b> : ${trendingList[3].author.published_date}</p>
@@ -195,7 +195,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             <div class="card-body text-left">
                 <h2 class="card-title text-orange-300 text-base md:text-2xl">${entertainmentList[0].title}</h2>
                 <p class="text-defaultcolor text-xs md:text-sm">
-                    ${entertainmentList[0].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label>
+                    ${entertainmentList[0].details.slice(0, 100)}... <button class="text-white cursor-pointer underline">See More</button>
                 </p>
                 <div class="card-actions">
                     <div class="stat flex items-center py-0 px-0">
@@ -227,7 +227,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             <div class="card-body text-left">
                 <h2 class="card-title text-orange-300 text-base md:text-2xl">${entertainmentList[1].title}</h2>
                 <p class="text-defaultcolor text-xs md:text-sm">
-                    ${entertainmentList[1].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label>
+                    ${entertainmentList[1].details.slice(0, 100)}... <button class="text-white cursor-pointer underline">See More</button>
                 </p>
                 <div class="card-actions">
                     <div class="stat flex items-center py-0 px-0">
@@ -253,7 +253,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             <div class="card-body text-left">
                 <h2 class="card-title text-orange-300 text-base md:text-2xl">${entertainmentList[2].title}</h2>
                 <p class="text-defaultcolor text-xs md:text-sm">
-                    ${entertainmentList[2].details.slice(0, 100)}... <label class="text-white cursor-pointer underline">See More</label>
+                    ${entertainmentList[2].details.slice(0, 100)}... <button class="text-white cursor-pointer underline">See More</button>
                 </p>
                 <div class="card-actions">
                     <div class="stat flex items-center py-0 px-0">

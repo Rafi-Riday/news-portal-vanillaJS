@@ -14,13 +14,24 @@ const specificNewsDisplay = (categoryId) => {
         <div id="news-container-child-count" class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base"></div>
         <!-- sorting section -->
         <section class="my-5 p-4 w-full bg-slate-700 rounded-xl text-sm md:text-base flex justify-between">
-            <!-- sorting option -->
+            <!-- sorting option using select-option, does not work in phone browser -->
+            <!--
             <select id="select-sorting" class="select select-info">
-                <option value="latest" selected class="hidden">Sort By</option>
-                <option value="latest">Latest</option>
-                <option value="views">Views</option>
-                <option value="ratings">Ratings</option>
+            <option value="latest" selected class="hidden">Sort By</option>
+            <option value="latest">Latest</option>
+            <option value="views">Views</option>
+            <option value="ratings">Ratings</option>
             </select>
+            -->
+            <!-- sorting option using btn -->
+            <div class="dropdown">
+                <label tabindex="0" class="bg-slate-900 hover:bg-slate-900 border-info hover:border-info btn m-1">Sort By&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></label>
+                <div tabindex="0" class="bg-slate-900 border-2 border-opacity-75 border-info dropdown-content menu p-2 shadow bg-base-100 rounded-box gap-1 w-32">
+                    <button id="latest" class="select-sorting btn btn-ghost">Latest</button>
+                    <button id="views" class="select-sorting btn btn-ghost">Views</button>
+                    <button id="ratings" class="select-sorting btn btn-ghost">Ratings</button>
+                </div>
+            </div>
             <!-- todays pick vs trading -->
             <div class="flex flex-col sm:flex-row gap-2">
                 <button onclick="sortBoolianBtn(this, 'boolian-btn'); sortAndFilter.filterData = 'none'; specificNewsDisplayEach('${categoryId}')"
@@ -39,11 +50,20 @@ const specificNewsDisplay = (categoryId) => {
         </div>
     `;
 
-    const selectSorting = document.getElementById('select-sorting');
-    selectSorting.addEventListener('click', function (event) {
-        sortAndFilter.sortData = selectSorting.value;
-        specificNewsDisplayEach(categoryId);
-    })
+    // sorting option using select-option, does not work in phone browser
+    // const selectSortingA = document.getElementById('select-sorting');
+    // selectSortingA.addEventListener('click', function (event) {
+    //     sortAndFilter.sortData = selectSortingA.value;
+    //     specificNewsDisplayEach(categoryId);
+    // })
+
+    const selectSortingBtnList = document.getElementsByClassName('select-sorting');
+    for (const selectSortingBtn of selectSortingBtnList) {
+        selectSortingBtn.addEventListener('click', function () {
+            sortAndFilter.sortData = selectSortingBtn.getAttribute('id');
+            specificNewsDisplayEach(categoryId);
+        })
+    }
 
     specificNewsDisplayEach(categoryId);
 }
@@ -103,7 +123,7 @@ src="${news.thumbnail_url}" alt="${news.title}">
 <div class="card-body p-4 text-left">
 <h2 class="card-title text-orange-300">${news.title}</h2>
 <p class="text-defaultcolor">
-${news.details.slice(0, 100)}... <label onclick="detailsModal('${news._id}')" for="details-modal" class="text-white cursor-pointer underline">See More</label>
+${news.details.slice(0, 100)}... <label onclick="detailsModal('${news._id}')" for="details-modal" class="text-white cursor-pointer underline"><i>See More</i></label>
 </p>
 <div class="flex flex-col sm:flex-row gap-2 bg-slate-700 shadow-inner shadow-slate-800 rounded-xl">
     <div class="stat flex gap-2 items-center py-2 px-0 pl-4 sm:pl-2">
