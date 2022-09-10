@@ -150,7 +150,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             </figure>
             <div class="card-body bg-gradient-to-b from-[#0006] absolute">
                 <div class="card-actions  text-orange-50">
-                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">Shaquille
+                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">
                         ${worldNewsList[0].title}
                     </h2>
                 </div>
@@ -162,7 +162,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             </figure>
             <div class="card-body bg-gradient-to-b from-[#0006] absolute">
                 <div class="card-actions  text-orange-50">
-                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">Shaquille
+                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">
                         ${worldNewsList[1].title}
                     </h2>
                 </div>
@@ -174,7 +174,7 @@ const writeHomeInsideMainContainer = (dataArray) => {
             </figure>
             <div class="card-body bg-gradient-to-b from-[#0006] absolute">
                 <div class="card-actions  text-orange-50">
-                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">Shaquille
+                    <h2 class="card-title p-2 rounded-lg text-sm md:text-base lg:text-lg">
                         ${worldNewsList[3].title}
                     </h2>
                 </div>

@@ -39,8 +39,13 @@ const specificNewsDisplay = (categoryId) => {
         </div>
     `;
 
-    specificNewsDisplayEach(categoryId);
+    const selectSorting = document.getElementById('select-sorting');
+    selectSorting.addEventListener('click', function (event) {
+        sortAndFilter.sortData = selectSorting.value;
+        specificNewsDisplayEach(categoryId);
+    })
 
+    specificNewsDisplayEach(categoryId);
 }
 
 const specificNewsDisplayEach = async (categoryId) => {
@@ -85,7 +90,6 @@ const specificNewsDisplayEach = async (categoryId) => {
     }
 
 }
-
 
 const displayNewsFunction = (dataArray, categoryId) => {
     document.getElementById('specific-news-container').innerHTML = '<button id="loading" class="xl:col-span-2 btn btn-lg bg-transparent loading">loading</button>';
@@ -162,13 +166,5 @@ ${news.details.slice(0, 100)}
     else {
         document.getElementById('specific-news-container').classList.remove('hidden');
     }
-
-
-    const selectSorting = document.getElementById('select-sorting');
-    selectSorting.addEventListener('click', function (event) {
-        sortAndFilter.sortData = selectSorting.value;
-        specificNewsDisplayEach(categoryId);
-    })
-
 }
 
