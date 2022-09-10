@@ -26,7 +26,7 @@ const specificNewsDisplay = (categoryId) => {
             <!-- sorting option using btn -->
             <div class="dropdown">
                 <label tabindex="0" class="bg-slate-900 hover:bg-slate-900 border-info hover:border-info btn m-1">Sort By&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></label>
-                <div tabindex="0" class="bg-slate-900 border-2 border-opacity-75 border-info dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32">
+                <div tabindex="0" class="bg-slate-900 border-2 border-opacity-75 border-info dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
                     <button id="latest" class="select-sorting btn btn-ghost">Latest</button>
                     <button id="views" class="select-sorting btn btn-ghost">Views</button>
                     <button id="ratings" class="select-sorting btn btn-ghost">Ratings</button>
